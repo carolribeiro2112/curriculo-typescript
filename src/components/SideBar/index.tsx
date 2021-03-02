@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Contatos } from "../../types/ContactList";
 import {EducationItem2} from "../../types/Education";
 import ContactList from "../ContactList"
 import EducationItem from "../Education"
+import useToggle from '../../hooks/useToggle';
 
 interface SideBarProps {
   contato: Contatos[],
@@ -10,13 +11,7 @@ interface SideBarProps {
 }
 
 function SideBar(props: SideBarProps) {
-  const [dados,mostraDados] = useState<Boolean>(false)
-
-  console.log("sideBar",props)
-
-  const toggle = () => {
-    mostraDados(!dados)
-  }
+  const [data, showData] = useToggle()
 
   return(
     <>
@@ -24,10 +19,10 @@ function SideBar(props: SideBarProps) {
         <div className="sidebar">
           <h3>Contatos</h3>
 
-          <button onClick={toggle}>Mostrar Contatos</button>
+          <button onClick={showData}>Mostrar Contatos</button>
           
           {props.contato.map((item: Contatos)=> (
-            dados && <ContactList key={item.id} sidebar={item}/> 
+            data && <ContactList key={item.id} sidebar={item}/> 
           ))}
           
         </div>

@@ -7,7 +7,6 @@ export interface FakeApiInterface {
   ocupacao: string,
   resumo: string,
   perfilProfissional: string,
-  // avatar: string,
   contatos: Contatos[],
   educacao: EducationItem2[],
   experiencia: Experience []

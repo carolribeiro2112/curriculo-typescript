@@ -3,7 +3,6 @@ export interface ProfileItem {
     nome: string,
     ocupacao: string,
     resumo: string,
-    avatar: string,
     perfilProfissional: string
   }
 }

@@ -5,6 +5,7 @@ import "./App.css"
 import SideBar from "./components/SideBar"
 import Profile from "./components/Profile"
 import ProfessionalExperience from "./components/ProfessionalExperience"
+// import { FakeApiInterface } from "./types/FakeApi";
 
 function App() {
 
