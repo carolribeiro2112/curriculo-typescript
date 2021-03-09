@@ -5,6 +5,7 @@ import ContactList from "../ContactList"
 import EducationItem from "../Education"
 import useToggle from '../../hooks/useToggle';
 
+
 interface SideBarProps {
   contato: Contatos[],
   educacao: EducationItem2[],
@@ -19,7 +20,10 @@ function SideBar(props: SideBarProps) {
         <div className="sidebar">
           <h3>Contatos</h3>
 
-          <button onClick={showData}>Mostrar Contatos</button>
+          
+            <button onClick={showData}>Mostrar Contatos</button>
+        
+          
           
           {props.contato.map((item: Contatos)=> (
             data && <ContactList key={item.id} sidebar={item}/> 
